@@ -4,10 +4,10 @@
 cd "${HOME}"
 module reset
 #
-# Start Jupyter Notebook Server
+# Start JupyterLab Server
 #
 module load Anaconda3
 <%= context.custom_environment %>
 unset XDG_RUNTIME_DIR
-# Launch the Jupyter Notebook Server
+# Launch the JupyterLab Server
 jupyter-lab --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>

@@ -44,7 +44,7 @@ attributes:
       # format:
       # module load example_module/VERSION example_module2
 
-  # Whether Conda extensions will be available within the Jupyter notebook
+  # Whether Conda extensions will be available within the JupyterLab
   # server
   #
   # @note Allows the user to use conda environment-based kernels from their
@@ -56,8 +56,8 @@ attributes:
   # @see https://docs.continuum.io/anaconda/user-guide/tasks/use-jupyter-notebook-extensions
   conda_extensions: "1"
 
-  # Any extra command line arguments to feed to the `jupyter notebook ...`
-  # command that launches the Jupyter notebook within the batch job
+  # Any extra command line arguments to feed to the `jupyter-lab ...`
+  # command that launches the JupyterLab within the batch job
   extra_jupyter_args:
     widget: text_field
     label: Extra JupyterLab arguments
