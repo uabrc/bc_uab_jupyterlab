@@ -1,9 +1,9 @@
-# Batch Connect - Example Jupyter Notebook Server
+# Batch Connect - JupyterLab
 
 ![GitHub Release](https://img.shields.io/github/release/osc/bc_example_jupyter.svg)
 ![GitHub License](https://img.shields.io/github/license/osc/bc_example_jupyter.svg)
 
-An example Batch Connect app that launches a Jupyter Notebook server within a
+An example Batch Connect app that launches a JupyterLab within a
 batch job.
 
 ## Prerequisites
@@ -12,9 +12,9 @@ This Batch Connect app requires the following software be installed on the
 **compute nodes** that the batch job is intended to run on (**NOT** the
 OnDemand node):
 
-- [Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/) 4.2.3+ (earlier
+- [JupyterLab](http://jupyterlab.readthedocs.io/en/latest/) 3.2.1 (earlier
   versions are untested but may work for you)
-- [OpenSSL](https://www.openssl.org/) 1.0.1+ (used to hash the Jupyter Notebook
+- [OpenSSL](https://www.openssl.org/) 1.0.1+ (used to hash the JupyterLab
   server password)
 
 **Optional** software:
@@ -22,7 +22,7 @@ OnDemand node):
 - [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)
   6.0.1+ or any other `module purge` and `module load <modules>` based CLI
   used to load appropriate environments within the batch job before launching
-  the Jupyter Notebook server.
+  the JupyterLab.
 
 ## Install
 
@@ -34,16 +34,16 @@ this.
 
 ```sh
 # Download the zip from the GitHub page
-wget https://github.com/OSC/bc_example_jupyter/archive/master.tar.gz
+wget https://github.com/uabrc/ood_jupyterlab/archive/master.tar.gz
 
 # Create a catchy directory
-mkdir my_jupyter_app
+mkdir my_jupyterlab_app
 
 # Unzip the downloaded file into this directory
-tar xzvf master.tar.gz -C my_jupyter_app --strip-components=1
+tar xzvf master.tar.gz -C my_jupyterlab_app --strip-components=1
 
 # Change the working directory to this new directory
-cd my_jupyter_app
+cd my_jupyterlab_app
 ```
 
 From here you will make any modifications to the code that you would like and
