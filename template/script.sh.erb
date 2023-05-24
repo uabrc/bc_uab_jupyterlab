@@ -7,7 +7,7 @@ module reset
 # Start JupyterLab Server
 #
 module load Anaconda3
-<%= context.custom_environment %>
+<%= context.custom_environment.gsub(/\r\n?/, "\n") %>
 unset XDG_RUNTIME_DIR
 # Launch the JupyterLab Server
 jupyter-lab --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>
