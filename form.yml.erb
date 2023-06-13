@@ -80,6 +80,13 @@ attributes:
     max: 128
     step: 1
 
+  bc_num_gpus:
+    label: Number of GPUs
+    value: 1
+    min: 1
+    max: 4
+    step: 1
+
   bc_partition:
     widget: select
     label: Partition
@@ -95,6 +102,9 @@ attributes:
       - [ "largemem-long", "largemem-long" ]
       - [ "amd-hdr100", "amd-hdr100" ]
       - [ "intel-dcb", "intel-dcb" ]
+      - [ "amperenodes-debug", "amperenodes-debug" ]
+      - [ "amperenodes", "amperenodes" ]
+      - [ "amperenodes-medium", "amperenodes-medium" ]
 
 # All of the attributes that make up the Dashboard form (in respective order),
 # and made available to the submit configuration file and the template ERB
@@ -111,6 +121,7 @@ form:
   - extra_jupyter_args
   - bc_num_hours
   - bc_partition
+  - bc_num_gpus
   - bc_num_slots
   - bc_num_mems
   - bc_email_on_started
